@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    row-gap: 25px;
+}
+
+.container i {
+    color: var(--blue);
+    font-size: 200px;
+}
+
+.container h2 {
+    color: var(--orange);
+    font-size: 44px;
+}

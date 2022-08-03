@@ -1,0 +1,17 @@
+<section class="product-list">
+    <!--para cada produto do vetor declarado no TS "produtos" fazer esse HTML-->
+    <div class="product-list__card" *ngFor="let produto of produtos">
+        <!--router para caso clique passando a rota /produtos/ e o id equivalente-->
+        <a routerLink="/produtos/{{produto.id}}" class="product-list__link" >
+            <!--passando o valor de imagem do objeto do tipo produto-->
+            <img [src]="produto.imagem">
+            <div class="product-list__infos">
+                <h2 class="product-item__name"> {{produto.descricao}} </h2>
+                <!--Pipe de currency para formatação de moeda-->
+                <p class="product-item__price"> {{produto.preco | currency: "BRL" }} </p>
+                <p class="product-item__price-description"> {{produto.descricaoPreco}} </p>
+                <button class="product-item__buy-button" type="button">Comprar</button>
+            </div>
+        </a>
+    </div>
+</section>
